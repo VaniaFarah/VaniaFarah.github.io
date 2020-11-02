@@ -31,24 +31,24 @@ div{
 <script>
     $(document).ready(function() {
  $('.error').hide();//menyembunyikan label error
- $('.submit').click(function(event){
- data=$('.password').val();
+ $('.submit').click(function(event){//untuk trigger ketika di klik akan berjalan
+ data=$('.password').val();//data password
  var len=data.length;
  if(len<1)
  {
- $('.password').next().show();
+ $('.password').next().show();//menampilkan ketikan password
  }
  else
  {
  $('.password').next().hide();//menyembunyikan ketikan password
  }
- if($('.password').val() !=$('.confpass').val())
+ if($('.password').val() !=$('.confpass').val())//mengetik dan mengkonfirmasi password
  {
- $('.confpass').next().show();
+ $('.confpass').next().show();//menampilkan ketikan ulang password untuk memastikan bahwa password benar
  }
  else
  {
- $('.confpass').next().hide();
+ $('.confpass').next().hide();//menyembunyikan ketikan ulang password untuk memastikan bahwa password benar
  }
  event.preventDefault();
  });
